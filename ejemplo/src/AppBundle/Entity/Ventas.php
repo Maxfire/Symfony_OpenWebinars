@@ -27,4 +27,70 @@ class Ventas
      */
     protected $id;
 
+    /**
+     * @ORM\Column(type="string", length=60, nullable=false)
+     */
+    protected $fecha;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    protected $precio;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param string $fecha
+     * @return Ventas
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return string 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Set precio
+     *
+     * @param float $precio
+     * @return Ventas
+     */
+    public function setPrecio($precio)
+    {
+        $this->precio = $precio;
+
+        return $this;
+    }
+
+    /**
+     * Get precio
+     *
+     * @return float 
+     */
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
 }
